@@ -1,0 +1,118 @@
+%******************************************************************************%
+%**** mtw2017 - proposal ******************************************************%
+%**** 20th january 2017  ******************************************************%
+%**** daniel feldmann    ******************************************************%
+%**** pdflatex -> pdf    ******************************************************%
+%******************************************************************************%
+%
+%--- font encoding ------------------------------------------------------------%
+\usepackage[T1]{fontenc}                                                % output
+\usepackage[utf8]{inputenc}                                              % input
+% \usepackage{breakurl}
+\usepackage[hyphens]{url}                  % avoid character clashes in email/web address
+% \usepackage{}
+%------------------------------------------------------------------------------%
+%
+%--- fonts --------------------------------------------------------------------%
+\usepackage{palatino}                                                    % roman
+\usepackage[scaled]{helvet}                                         % sans serif
+\usepackage{courier}                                                % typewriter
+\usepackage{eulervm}                                                      % math
+\linespread{1.05}                                  % Palatino needs more leading
+%------------------------------------------------------------------------------%
+%
+%--- modify title fonts -------------------------------------------------------%
+\setkomafont{title}{\normalfont\bfseries}
+\setkomafont{section}{\normalfont\bfseries\Large}
+\setkomafont{subsection}{\normalfont\bfseries\large}
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+\setkomafont{caption}{\normalfont\footnotesize}
+\setkomafont{captionlabel}{\normalfont\bfseries\footnotesize}
+%------------------------------------------------------------------------------%
+%
+%--- language settings --------------------------------------------------------%
+\usepackage[UKenglish]{babel}
+%------------------------------------------------------------------------------%
+%
+%--- math, units and numbers --------------------------------------------------%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{dsfont}
+\usepackage{mathtools}                                              % prescripts
+\PassOptionsToPackage{decimalsymbol=.}{siunitx}
+\PassOptionsToPackage{binary-units=true}{siunitx}
+\usepackage{siunitx}
+\usepackage{xfrac}
+%------------------------------------------------------------------------------%
+%
+%--- colouring ----------------------------------------------------------------%
+\usepackage[dvipsnames]{xcolor}                                    % make it gay
+%------------------------------------------------------------------------------%
+%
+%--- useful command definitions -----------------------------------------------%
+\usepackage{xspace}                       % get your subsequent spacing straight
+\DeclareRobustCommand{\comment}[1]{\textit{\color{Gray}#1}\xspace}
+\DeclareRobustCommand{\draft}[1]{\textit{\color{Red}#1}\xspace}
+%------------------------------------------------------------------------------%
+%
+%--- cool pdf stuff -----------------------------------------------------------%
+\PassOptionsToPackage{hyperindex}{hyperref}
+\PassOptionsToPackage{breaklinks}{hyperref}                % useful for long url
+\PassOptionsToPackage{hidelinks}{hyperref}          % remove ugly coloured boxes
+\usepackage{hyperref}                      % hyperlinks for cross-refs and cites
+\hypersetup{
+ colorlinks,
+ linkcolor={Maroon},
+ citecolor={Maroon},
+ urlcolor={Maroon}
+}
+%------------------------------------------------------------------------------%
+%
+%--- figures ------------------------------------------------------------------%
+\RequirePackage{graphicx}
+\RequirePackage{subfig}
+% \usepackage{subfigure}           % obsolte, use subfig which provides subfloat
+\RequirePackage{varwidth}            % to place several pics within one subfloat
+% \usepackage{overpic}
+% \addto\extrasUKenglish{\renewcommand{\figurename}{Fig.}}
+%------------------------------------------------------------------------------%
+%
+%--- tables -------------------------------------------------------------------%
+% \usepackage{tabularx}
+\usepackage{booktabs}
+\setlength{\extrarowheight}{0.2em}                     % increase table row height
+% \usepackage{longtable}
+% \usepackage{lscape}
+% \usepackage{multirow}
+% \usepackage{ragged2e}
+% \newcolumntype{y}[1]{>{\RaggedLeft\arraybackslash\hsize=#1\hsize}X}
+% \addto\extrasngerman{\renewcommand{\tablename}{Tab.}}
+%------------------------------------------------------------------------------%
+%
+%--- bibliography -------------------------------------------------------------%
+% \PassOptionsToPackage{authoryear, sort&compress}{natbib}
+\PassOptionsToPackage{square, numbers}{natbib}
+\usepackage{natbib}
+% \usepackage{multibib}                      % more than one bib in one document
+% \newcites{myPublications}{Publikationen}                   % define second bib
+%------------------------------------------------------------------------------%
+%
+%--- index --------------------------------------------------------------------%
+% \usepackage{makeidx}                                   % allows index generation
+% \usepackage{multicol}                            % used for the two-column index
+% \makeindex       % for subject index, use style svind.ist with makeindex program
+%------------------------------------------------------------------------------%
+%
+%--- footnotes ----------------------------------------------------------------%
+% \usepackage[bottom]{footmisc}                  % places footnotes at page bottom
+%------------------------------------------------------------------------------%
+%
+%
+%
+\newcommand{\blackline}{\textcolor{black}{\protect\rule[0.5ex]{1.2em}{1pt}}}
+\newcommand{\redline}{\textcolor{red}{\protect\rule[0.5ex]{1.2em}{1pt}}}
+\newcommand{\blueline}{\textcolor{blue}{\protect\rule[0.5ex]{1.2em}{1pt}}}
+\newcommand{\magentaline}{\textcolor{magenta}{\protect\rule[0.5ex]{1.2em}{1pt}}}
+\newcommand{\orangeline}{\textcolor{orange}{\protect\rule[0.5ex]{1.2em}{1pt}}}
+\newcommand{\cyanline}{\textcolor{cyan}{\protect\rule[0.5ex]{1.2em}{1pt}}}

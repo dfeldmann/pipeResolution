@@ -1,0 +1,106 @@
+%******************************************************************************%
+%**** hff2016 - mathOperators *************************************************%
+%**** 08th july 2016          *************************************************%
+%**** daniel feldmann         *************************************************%
+%**** pdflatex -> pdf         *************************************************%
+%******************************************************************************%
+%
+%--- special characters -------------------------------------------------------%
+\newcommand{\increment}{\,d\!}
+\DeclareRobustCommand{\imag}{\ensuremath{\dot{\imath}}\xspace}  % imaginary unit
+\DeclareRobustCommand{\orderof}{\ensuremath{\mathcal{O}}\xspace}     % magnitude
+\DeclareRobustCommand{\real}{\ensuremath{\mathcal{R}}\xspace}        % real part
+%------------------------------------------------------------------------------%
+%
+%--- non-dimensional numbers --------------------------------------------------%
+\DeclareRobustCommand{\Courant}{\ensuremath{C\!o}\xspace}       % Courant number
+\DeclareRobustCommand{\Mach}{\ensuremath{M\!a}\xspace}             % Mach number
+\DeclareRobustCommand{\Reynolds}{\ensuremath{Re}\xspace}       % Reynolds number
+\DeclareRobustCommand{\ReDelta}{\ensuremath{R\!e_{\delta}}\xspace}
+\DeclareRobustCommand{\ReTau}{\ensuremath{R\!e_{\tau}}\xspace}
+\DeclareRobustCommand{\ReTauStar}{\ensuremath{R\!e_{\tau}^{*}}\xspace}
+\DeclareRobustCommand{\Strouhal}{\ensuremath{S\!t}\xspace}     % Strouhal number
+\DeclareRobustCommand{\Womersley}{\ensuremath{W\!\!o}\xspace} % Womersley number
+%------------------------------------------------------------------------------%
+%
+%--- special variables --------------------------------------------------------%
+\DeclareRobustCommand{\ir}{\ensuremath{k_{\text{ir}}}\xspace}             % implicit radius
+\DeclareRobustCommand{\tauw}{\ensuremath{\tau_{\text{w}}}\xspace}         % wall shear stress
+\DeclareRobustCommand{\tauwStar}{\ensuremath{\tau_{\text{w}}^{*}}\xspace} % effective wall shear stress
+\DeclareRobustCommand{\tauwsw}{\ensuremath{\tau_{\text{w,SW}}}\xspace}    % wall shear stress, Sexl-Womersley
+\DeclareRobustCommand{\ubulk}{\ensuremath{u_{\text{b}}}\xspace}           % bulk velocity
+\DeclareRobustCommand{\ubulksw}{\ensuremath{u_{\text{b,SW}}}\xspace}      % bulk velocity, Sexl-Womersley
+\DeclareRobustCommand{\upeak}{\ensuremath{u_{\text{p}}}\xspace}           % peak bulk velocity
+\DeclareRobustCommand{\upeaksw}{\ensuremath{u_{\text{p,SW}}}\xspace}      % peak bulk velocity, Sexl-Womersley
+\DeclareRobustCommand{\utau}{\ensuremath{u_{\tau}}\xspace}                % friction velocity
+\DeclareRobustCommand{\utauStar}{\ensuremath{u^{*}_{\tau}}\xspace}        % friction velocity
+%------------------------------------------------------------------------------%
+%
+%--- indices ------------------------------------------------------------------%
+\newcommand{\analytical}{\text{ana}}
+\newcommand{\characteristic}{c\!h\!a}
+\newcommand{\constant}{\text{const}}
+\newcommand{\critical}{\text{krit}}
+\newcommand{\initial}{i\!n\!i}
+\newcommand{\numerical}{n\!u\!m}
+\newcommand{\reference}{\text{ref}}
+% \newcommand{\reference}{r\!e\!f}
+\newcommand{\tidal}{t\!i\!d}
+%------------------------------------------------------------------------------%
+%
+%--- finite volume sub/super scripts ------------------------------------------%
+% \newcommand{\alphap}{\!\alpha^{\!+}}                              % alpha plus
+% \newcommand{\alpham}{\!\alpha^{\!-}}                             % alpha minus
+\newcommand{\betap}{\!\beta^{\!+}}                                   % beta plus
+\newcommand{\betam}{\!\beta^{\!-}}                                  % beta minus
+\newcommand{\betapm}{\!\beta^{\!\pm}}                          % beta plus minus
+%------------------------------------------------------------------------------%
+%
+%--- functions ----------------------------------------------------------------%
+\DeclareRobustCommand{\Bessel}{\ensuremath{\mathcal{J}_{0}}\xspace} % Bessel's function of first kind and order zero
+% \DeclareRobustCommand{\Bessel}{\ensuremath{J_{0}}\!\!}         % Bessel's function of first kind and order zero
+\renewcommand{\cos}{\operatorname{cos}}  % {c\!o\!s\!}
+\renewcommand{\cosh}{c\!o\!s\!h}
+% \renewcommand{\max}{m\!a\!x}
+\DeclareRobustCommand{\Real}{\ensuremath{\mathcal{R}}\xspace}   % real part of a complex
+\renewcommand{\sin}{sin\!}
+%------------------------------------------------------------------------------%
+%
+%--- vector operators ---------------------------------------------------------%
+\renewcommand{\vec}{\boldsymbol}
+\newcommand{\divergence}{\operatorname{div}} %{d\!i\!v\!}
+\newcommand{\gradient}{\operatorname{grad}} %{g\!r\!a\!d}
+\newcommand{\laplacian}{\vec{\Delta}}
+\usepackage{rotating}                                        % provides sideways
+\renewcommand{\nabla}{\begin{sideways}\begin{sideways}$\laplacian$\end{sideways}\end{sideways}}
+%------------------------------------------------------------------------------%
+%
+%--- relations ----------------------------------------------------------------%
+\newcommand{\constraint}{\stackrel{!}{=}}
+%------------------------------------------------------------------------------%
+%
+%--- statistical average delimiter --------------------------------------------%
+\DeclareRobustCommand{\lla}{\left\langle}
+\DeclareRobustCommand{\rra}{\right\rangle}
+%------------------------------------------------------------------------------%
+%
+%------------------------------------------------------------------------------%
+\newcommand{\ascii}{\texttt{ascii}\xspace}
+\newcommand{\idl}{\texttt{idl/gdl}\xspace}
+\newcommand{\flowsi}{\texttt{flowsi}\xspace}
+\newcommand{\fortran}{\texttt{fortran90}\xspace}
+\newcommand{\fftw}{\texttt{fftw3}\xspace}
+\newcommand{\mpi}{\texttt{mpi}\xspace}
+\newcommand{\netcdf}{\texttt{netCDF}\xspace}
+\newcommand{\of}{OpenFOAM}
+%------------------------------------------------------------------------------%
+%
+%------------------------------------------------------------------------------%
+\newcommand{\ie}{i.\,e.\,}
+\newcommand{\Ie}{I.\,e.\,}
+\newcommand{\eg}{e.\,g.\,}
+\newcommand{\Eg}{E.\,g.\,}
+%------------------------------------------------------------------------------%
+%
+%
+%
